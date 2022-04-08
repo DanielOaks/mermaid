@@ -435,9 +435,7 @@ Examples of tooltip usage below:
 
 ```html
 <script>
-  var callback = function(){
-      alert('A callback was triggered');
-  }
+  var callback = function(){ alert('A callback was triggered'); }
 </script>
 ```
 
@@ -486,19 +484,8 @@ Beginners tip, a full example using interactive links in a html context:
   </div>
 
   <script>
-    var callback = function(){
-        alert('A callback was triggered');
-    }
-    var config = {
-        startOnLoad:true,
-        flowchart:{
-            useMaxWidth:true,
-            htmlLabels:true,
-            curve:'cardinal',
-        },
-        securityLevel:'loose',
-    };
-
+    var callback = function(){ alert('A callback was triggered'); }; var config = { startOnLoad:true,
+    flowchart:{ useMaxWidth:true, htmlLabels:true, curve:'cardinal', }, securityLevel:'loose', };
     mermaid.initialize(config);
   </script>
 </body>
@@ -613,11 +600,11 @@ If a class is named default it will be assigned to all classes without specific 
 
 It is possible to add icons from fontawesome.
 
-The icons are accessed via the syntax fa:#icon class name#.
+The icons are accessed via the syntax fa:#icon class name#. You can also access brands icons with the syntax fab:#icon class name#.
 
 ```mermaid-example
 flowchart TD
-    B["fa:fa-twitter for peace"]
+    B["fab:fa-twitter for peace"]
     B-->C[fa:fa-ban forbidden]
     B-->D(fa:fa-spinner);
     B-->E(A fa:fa-camera-retro perhaps?)
